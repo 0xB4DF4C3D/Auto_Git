@@ -68,3 +68,16 @@ git을 사용하지 않던 환경에서 git을 사용하게 되면 기존의 프로젝트들을 git reposit
 이 코드에서 의도치 않게 공격 벡터를 제공해 줄 수 있습니다. 그 점 주의하세요. 하지만 왠만하면 없을거라 생각합니다. 찾으시면 알려주세요. 
 
 아 그리고 이건 윈도우즈 7, .NET Framework 4.0 에서만 구동이 확인되었습니다. 문제가 생긴다면 알려주시면 감사하겠습니다.
+
+아 그리고 사실 git을 써본지 일주일도 안되서 만든거라 제가 실수한게 있을 수도 있습니다. 혹시 찾으시면 알려주세요.
+
+이딴걸 여기까지 읽어주셔서 감사합니다.
+
+# 백문이 불여일견
+---
+
+![마우스 오른쪽 메뉴](https://github.com/0xB4DF4C3D/Auto_Git/imgs/1.png "마우스 오른쪽 메뉴")
+
+![Repository 이름](https://github.com/0xB4DF4C3D/Auto_Git/imgs/2.png "Repository 이름")
+
+![결과](https://github.com/0xB4DF4C3D/Auto_Git/imgs/3.png "결과")
