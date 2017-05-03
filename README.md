@@ -78,6 +78,6 @@ git을 사용하지 않던 환경에서 git을 사용하게 되면 기존의 프로젝트들을 git reposit
 
 ![마우스 오른쪽 메뉴](https://github.com/0xB4DF4C3D/Auto_Git/blob/master/imgs/1.png "마우스 오른쪽 메뉴")
 
-![Repository 이름](https://github.com/0xB4DF4C3D/Auto_Git/blob/master/imgs/2.png "Repository 이름")
+![Repository 이름](https://github.com/0xB4DF4C3D/Auto_Git/blob/master/imgs/2.PNG "Repository 이름")
 
-![결과](https://github.com/0xB4DF4C3D/Auto_Git/blob/master/imgs/3.png "결과")
+![결과](https://github.com/0xB4DF4C3D/Auto_Git/blob/master/imgs/3.PNG "결과")
