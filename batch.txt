@@ -1,0 +1,29 @@
+PowerShell -command "& {[void][Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic'); $newRepositoryName = [Microsoft.VisualBasic.Interaction]::InputBox('Repository name', 'Plz input'); }"
+
+$ie = New-Object -com internetexplorer.application; 
+$ie.visible = $true; 
+$ie.navigate('https://github.com/new'); 
+while ($ie.busy -eq $true){ Start-Sleep 1; }; 
+$formName = $ie.Document.getElementsByName('repository[name]'); 
+@($formName)[0].value = $newRepositoryName; 
+$submitButton = ($ie.document.getElementsByTagName('button') | ? {$_.textContent -like '*Create*'}); 
+$submitButton.click(); 
+$newURL = $ie.LocationURL; 
+cd %cd%; 
+git remote add origin $newURL; 
+git push origin master; 
+$ie.Refresh(); 
+
+
+cmd /k "copy ^"D:\gitignores\my.gitignore^" ^".gitignore^" && git init && git add . && git commit -m ^"git created^""
+
+
+PowerShell -command "& {[void][Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic'); $newRepositoryName = [Microsoft.VisualBasic.Interaction]::InputBox('Repository name', 'Plz input'); $ie = New-Object -com internetexplorer.application; $ie.visible = $true; $ie.navigate('https://github.com/new'); while ($ie.busy -eq $true){ Start-Sleep 1; }; $formName = $ie.Document.getElementsByName('repository[name]'); @($formName)[0].value = $newRepositoryName; $submitButton = ($ie.document.getElementsByTagName('button')  | ? {$_.textContent -like '*Create*'}); $submitButton.click(); }"
+
+PowerShell -command ^"^& {[void][Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic'); $newRepositoryName = [Microsoft.VisualBasic.Interaction]::InputBox('Repository name', 'Plz input'); $ie = New-Object -com internetexplorer.application; $ie.navigate('https://github.com/new'); while ($ie.busy -eq $true){ Start-Sleep 1; }; $formName = $ie.Document.getElementsByName('repository[name]'); @($formName)[0].value = $newRepositoryName; $submitButton = ($ie.document.getElementsByTagName('button')  ^| ? {$_.textContent -like '*Create*'}); $submitButton.click(); while ($ie.busy -eq $true){ Start-Sleep 1; }; $newURL = $ie.LocationURL; cd ^%v; git remote add origin $newURL; git push origin master; $ie.Refresh(); $ie.visible = $true;}^"
+
+PowerShell -command "& {[void][Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic'); $newRepositoryName = [Microsoft.VisualBasic.Interaction]::InputBox('Repository name', 'Plz input'); $ie = New-Object -com internetexplorer.application; $ie.navigate('https://github.com/new'); while ($ie.busy -eq $true){ Start-Sleep 1; }; $formName = $ie.Document.getElementsByName('repository[name]'); @($formName)[0].value = $newRepositoryName; $submitButton = ($ie.document.getElementsByTagName('button')  | ? {$_.textContent -like '*Create*'}); $submitButton.click(); while ($ie.busy -eq $true){ Start-Sleep 1; }; $newURL = $ie.LocationURL; cd %cd%; git remote add origin $newURL; git push orign master; $ie.Refresh(); $ie.visible = $true;}"
+
+
+
+cmd /k "copy ^"C:\gitignores\base.gitignore^" ^".gitignore^" && git init && git add . && git commit -m ^"git created^" && PowerShell -command ^"^& {[void][Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic'); $newRepositoryName = [Microsoft.VisualBasic.Interaction]::InputBox('Repository name', 'Plz input'); $ie = New-Object -com internetexplorer.application; $ie.navigate('https://github.com/new'); while ($ie.busy -eq $true){ Start-Sleep 1; }; $formName = $ie.Document.getElementsByName('repository[name]'); @($formName)[0].value = $newRepositoryName; $submitButton = ($ie.document.getElementsByTagName('button')  ^| ? {$_.textContent -like '*Create*'}); $submitButton.click(); while ($ie.busy -eq $true){ Start-Sleep 1; }; $newURL = $ie.LocationURL; cd ^%v; git remote add origin $newURL; git push origin master; $ie.Refresh(); $ie.visible = $true;}^""
